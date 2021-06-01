@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Second</title>
+</head>
+<body>
+	<h1> Prakash is Great </h1>
+	<!-- we can write here small python !-->
+	<p>{{content}}</p>  <!-- It is used to Display content or any message you want but need to sepecify in render template !-->
+	{% for i in range(10) %}
+		<p> {{content[i]}} </p>
+	{% endfor %}
+    <!-- we can pass here a list also !-->
+    {%for x in content %}
+    	<p>{{x}} </p>
+    {% endfor %}
+
+</body>
+</html>
