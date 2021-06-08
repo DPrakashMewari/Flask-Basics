@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+		{% with messages  = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+		{% endwith %}		
+
+<form action="#" method="POST">
+
+<label>Name</label>
+<input type="text" name="name">
+<label>Address</label>
+<input type="text" name="address">
+<input type="Submit" value="Insert">
+
+
+</form>
+
+
+
+
+
+</body>
+</html>
