@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    {% if title %}
+        <title> Expense App - {{title}} </title>
+    {% else %}
+        <title> Expense App </title>
+    {% endif  %}
+    
+ <h2>
+     layout file
+ </h2>   
+ <body>
+    {% block content %}
+     <p> This is Layout file </p>
+    {% endblock %}
+
+</html>
