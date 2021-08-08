@@ -1,0 +1,47 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flask Chart</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<canvas id='barChart' width="800" height="200"></canvas>
+	<script>
+		var ctx = document.getElementById('barChart').getContext('2d');
+				var barChart = new Chart(ctx,{
+			type: 'bar',
+
+			data: {
+				labels: {{labels|safe}},
+				datasets:[
+				{
+					label: 'Data Point',
+					data: {{values | safe}},
+					fill: false,
+					borderColor: "rgb(75,192,192)",
+					lineTension: 0.1,
+					backgroundColor: [
+      			'rgba(255, 99, 132, 0.2)',
+      			'rgba(255, 159, 64, 0.2)',
+      			'rgba(255, 205, 86, 0.2)',
+      			'rgba(75, 192, 192, 0.2)',
+      			'rgba(54, 162, 235, 0.2)',
+      			'rgba(153, 102, 255, 0.2)',
+      			'rgba(201, 203, 207, 0.2)'
+    			],
+    			borderColor: [
+      			'rgb(255, 99, 132)'],
+
+
+				}
+			]
+
+		},
+		options: {responsive: false}
+
+	})
+</script>
+
+
+
