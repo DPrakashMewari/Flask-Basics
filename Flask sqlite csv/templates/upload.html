@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Title</title>
+</head>
+<body>
+<form ACTION="{{ url_for('upload') }}" enctype=multipart/form-data method=Post>
+    <input type=file name=file>
+    <input type=submit value=Upload>
+</form>
+
+Shape is: {{ shape }}
+
+
+
+
+
+<table class="table table-dark">
+<thead>
+	{% for table in tables %}
+          <td>  {{ table|safe }} </td>
+	{% endfor %}
+</thead>
+</table>
+    
+<table class="table table-dark">
+	<thead>
+			<td>{{ info|safe }}</td>	
+</thead>
+</table>
+<h4> SQL Query Top 5 </h4>
+
+# Sql Data Query Results
+{{sql1}}
+
+
+
+</body>
+</html>
