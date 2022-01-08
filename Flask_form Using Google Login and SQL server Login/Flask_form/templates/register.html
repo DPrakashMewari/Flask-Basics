@@ -1,0 +1,37 @@
+{% extends 'login.html' %}
+{% block title %}
+Register Page
+{% endblock %}
+
+
+{% block content %}
+
+
+<h5>Register</h5>
+
+<p> Register you account </p>
+  
+        <div class="inputs">
+            <form method="POST" class="form-register">
+                {{form.hidden_tag()}}
+
+
+			{{ form.username(class="form-control",placeholder="User Name")}}
+			<br>
+            {{ form.email_address(class="form-control",placeholder="Email")}}
+            <br>
+            {{ form.password1(class="form-control",placeholder="Password")}}
+            <br>
+            {{ form.password2(class="form-control",placeholder="Password")}}
+
+		</div>
+			
+			<br><br>
+
+			<br>
+                   {{ form.submit(class="btn btn-outline-primary") }}
+    </form>            
+
+{% endblock %} 
+
+
